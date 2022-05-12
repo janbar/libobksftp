@@ -1,0 +1,38 @@
+-bash-5.1$ uname -a
+SunOS solaris 5.11 11.4.42.111.0 i86pc i386 i86pc kvm
+-bash-5.1$ export OB_SERVER=192.168.2.3
+-bash-5.1$ export OB_USER=jlb
+-bash-5.1$ sbttest backup_file -libname $(pwd)/libobksftp.so
+The sbt function pointers are loaded from /export/home/oracle/src/libobk/build/libobksftp.so library.
+-- sbtinit succeeded
+-- sbtinit (2nd time) succeeded
+sbtinit: Media manager supports SBT API version 2.0
+sbtinit: vendor description string=SBT/SSH2-SFTP
+sbtinit: allocated sbt context area of 864 bytes
+sbtinit: Media manager is version 1.0.5.0
+-- sbtinit2 succeeded
+-- regular_backup_restore starts ................................
+-- sbtbackup succeeded
+write 100 blocks
+-- sbtwrite2 succeeded
+-- sbtclose2 succeeded
+sbtinfo2: SBTBFINFO_NAME=backup_file
+sbtinfo2: SBTBFINFO_SHARE=single user
+sbtinfo2: SBTBFINFO_ORDER=sequential access
+sbtinfo2: SBTBFINFO_METHOD=stream
+sbtinfo2: SBTBFINFO_LABEL=04B04325
+sbtinfo2: SBTBFINFO_CRETIME=Thu May 12 18:57:37 2022
+sbtinfo2: SBTBFINFO_COMMENT={uid=1000,gid=100,perms='100640'}
+-- sbtinfo2 succeeded
+-- sbtrestore succeeded
+file was created by this program:
+     seed=1558386, blk_size=16384, blk_count=100
+read 100 buffers
+-- sbtread2 succeeded
+-- sbtclose2 succeeded
+-- sbtremove2 succeeded
+-- regular_backup_restore ends   ................................
+-- sbtcommand succeeded
+proxy copy is not supported
+-- sbtend succeeded
+*** The SBT API test was successful ***

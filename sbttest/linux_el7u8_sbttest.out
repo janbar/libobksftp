@@ -1,0 +1,38 @@
+[oracle@oradb1 libobk]$ uname -a
+Linux oradb1 4.14.35-1902.303.4.1.el7uek.x86_64 #2 SMP Fri May 29 14:56:41 PDT 2020 x86_64 x86_64 x86_64 GNU/Linux
+[oracle@oradb1 libobk]$ export OB_SERVER=192.168.2.3
+[oracle@oradb1 libobk]$ export OB_USER=jlb
+[oracle@oradb1 libobk]$ sbttest backup_file -libname $(pwd)/build/libobksftp.so
+The sbt function pointers are loaded from /u01/src/libobk/build/libobksftp.so library.
+-- sbtinit succeeded
+-- sbtinit (2nd time) succeeded
+sbtinit: Media manager supports SBT API version 2.0
+sbtinit: vendor description string=SBT/SSH2-SFTP
+sbtinit: allocated sbt context area of 864 bytes
+sbtinit: Media manager is version 1.0.6.1
+-- sbtinit2 succeeded
+-- regular_backup_restore starts ................................
+-- sbtbackup succeeded
+write 100 blocks
+-- sbtwrite2 succeeded
+-- sbtclose2 succeeded
+sbtinfo2: SBTBFINFO_NAME=backup_file
+sbtinfo2: SBTBFINFO_SHARE=single user
+sbtinfo2: SBTBFINFO_ORDER=sequential access
+sbtinfo2: SBTBFINFO_METHOD=stream
+sbtinfo2: SBTBFINFO_LABEL=04B04325
+sbtinfo2: SBTBFINFO_CRETIME=Sun May 15 17:50:58 2022
+sbtinfo2: SBTBFINFO_COMMENT={uid=1000,gid=100,perms='100640'}
+-- sbtinfo2 succeeded
+-- sbtrestore succeeded
+file was created by this program:
+     seed=429523539, blk_size=16384, blk_count=100
+read 100 buffers
+-- sbtread2 succeeded
+-- sbtclose2 succeeded
+-- sbtremove2 succeeded
+-- regular_backup_restore ends   ................................
+-- sbtcommand succeeded
+proxy copy is not supported
+-- sbtend succeeded
+*** The SBT API test was successful ***
