@@ -66,7 +66,7 @@ CONFIGURE DEFAULT DEVICE TYPE TO 'SBT_TAPE';
 OB_SERVER     : REQUIRED, remote server name or IP
 OB_USER       : REQUIRED, remote user owns of the backup pieces
 OB_PATH       : optional, prefix path of the storage    (default: remote user home)
-OB_PUBLIC_KEY : optional, public key file path to use   (default: ~/.ssh/id_ras.pub)
+OB_PUBLIC_KEY : optional, public key file path to use   (default: ~/.ssh/id_rsa.pub)
 OB_SECRET_KEY : optional, private key file path to use  (default: ~/.ssh/id_rsa)
 ```
 
