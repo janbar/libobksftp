@@ -32,7 +32,8 @@ risk.
 ## Test it
 
 Remote user must append its file `~/.ssh/authorized_keys` with the public key
-of the local oracle user i.e `~/.ssh/id_rsa.pub`. 
+of the local oracle user i.e `~/.ssh/id_rsa.pub`.
+Using the default `$HOME/.ssh/` keys requires that the `HOME` environment variable be set correctly. Otherwise you must specify the paths with `OB_PUBLIC_KEY` and `OB_SECRET_KEY`.
 
 ```
 RUN {
@@ -68,6 +69,7 @@ OB_USER       : REQUIRED, remote user owns of the backup pieces
 OB_PATH       : optional, prefix path of the storage    (default: remote user home)
 OB_PUBLIC_KEY : optional, public key file path to use   (default: ~/.ssh/id_rsa.pub)
 OB_SECRET_KEY : optional, private key file path to use  (default: ~/.ssh/id_rsa)
-OB_PORT       : optional, remote server port (default: 22)
+OB_PORT       : optional, remote server port            (default: 22)
+OB_LOGFILE    : optional, file path for debug logging   (default: none)
 ```
 
