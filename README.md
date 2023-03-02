@@ -73,3 +73,13 @@ OB_PORT       : optional, remote server port            (default: 22)
 OB_LOGFILE    : optional, file path for debug logging   (default: none)
 ```
 
+## Annexes
+
+Obviously, you can easily list the sbt backup pieces on a remote server, using the ssh command. that might help to populate the catalog by generating a script as follows.
+
+```
+for bkp in $(ssh ${OB_USER}@${OB_SERVER} "ls ${OB_PATH}"); do
+  echo "CATALOG DEVICE TYPE 'SBT_TAPE' BACKUPPIECE '$bkp';"
+done
+```
+
