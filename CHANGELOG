@@ -1,0 +1,13 @@
+1.0.9.0:
+  Upgrade static dependency libssh2 to version 1.11.0-8c320a9
+  Add new binary for Enterprise Linux 9 x86_64
+
+1.0.8.1:
+  Upgrade static dependency libssh2 to version 1.10.0-7487dcf
+  Enterprise Linux 6 x86_64 will no longer updated
+
+1.0.6.0:
+  First release
+  Crypto backend for win64 is WinCNG
+  Crypto backend for unix is OpenSSL
+
