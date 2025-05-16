@@ -1,0 +1,35 @@
+C:\Oracle>%ORACLE_HOME%\bin\sbttest backup_data -libname C:\Oracle\obksftp.dll
+The sbt function pointers are loaded from C:\Oracle\obksftp.dll library.
+-- sbtinit succeeded
+-- sbtinit (2nd time) succeeded
+sbtinit: Media manager supports SBT API version 2.0
+sbtinit: vendor description string=SBT/SSH2-SFTP
+sbtinit: allocated sbt context area of 1896 bytes
+sbtinit: Media manager is version 1.0.11.0
+-- sbtinit2 succeeded
+-- regular_backup_restore starts ................................
+-- sbtbackup succeeded
+write 100 blocks
+-- sbtwrite2 succeeded
+-- sbtclose2 succeeded
+sbtinfo2: SBTBFINFO_NAME=backup_data
+sbtinfo2: SBTBFINFO_SHARE=single user
+sbtinfo2: SBTBFINFO_ORDER=sequential access
+sbtinfo2: SBTBFINFO_METHOD=stream
+sbtinfo2: SBTBFINFO_LABEL=06D15AAE
+sbtinfo2: SBTBFINFO_CRETIME=Fri May 16 20:51:47 2025
+sbtinfo2: SBTBFINFO_COMMENT={uid=1000,gid=1000,perms='100640'}
+-- sbtinfo2 succeeded
+-- sbtrestore succeeded
+file was created by this program:
+     seed=3475159, blk_size=16384, blk_count=100
+read 100 buffers
+-- sbtread2 succeeded
+-- sbtclose2 succeeded
+-- sbtremove2 succeeded
+-- regular_backup_restore ends   ................................
+-- sbtcommand succeeded
+proxy copy is not supported
+-- sbtend succeeded
+*** The SBT API test was successful ***
+
