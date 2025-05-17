@@ -73,6 +73,8 @@ OB_PORT       : optional, remote server port            (default: 22)
 OB_LOGFILE    : optional, file path for debug logging   (default: none)
 ```
 
+Note: The OB_LOGFILE parameter is used to trace internal errors (OBK and SSH2) for debugging. **It should only be set for testing with the SBTTEST tool**.
+
 ## Annexes
 
 Obviously, you can easily list the sbt backup pieces on a remote server, using the ssh command. that might help to populate the catalog by generating a script as follows.
