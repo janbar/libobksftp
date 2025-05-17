@@ -85,3 +85,18 @@ for bkp in $(ssh ${OB_USER}@${OB_SERVER} "ls ${OB_PATH}"); do
 done
 ```
 
+## How to debug a connection issue ?
+
+Prepare and launch a test as the following
+```
+export OB_SERVER=the_remote_ssh_server
+export OB_USER=the_remote_user
+export OB_PORT=22
+export OB_PUBLIC_KEY=filepath_of_public_key
+export OB_SECRET_KEY=filepath_of_private_key
+export OB_LOGFILE=$PWD/log
+export ORACLE_HOME=the_oracle_home
+$ORACLE_HOME/bin/sbttest dummy -libname {the path to the libobksftp}
+```
+Finally check the content of the log file $PWD/log.{pid}.
+
