@@ -4,6 +4,8 @@
 
 1.0.11.3:
   Add handler to log debug message from libssh2 into the log file
+  Crypto backend for win64 is OpenSSL. The lib crypto is linked statically,
+  and so included in to released binary.
 
 1.0.11.0:
   Upgrade static dependency libssh2 to version 1.11.0-420f902617
