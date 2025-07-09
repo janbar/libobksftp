@@ -19,8 +19,7 @@ connect to the database server.
 
 ## What dependency ?
 
-The driver is statically linked with LIBSSH2, and dependencies are limited to
-OpenSSL which is provided with the OS distribution. You don't need any agent or
+The driver is statically linked with LIBSSH2 and OpenSSL. You don't need any agent or
 third-part software. All requirements are in your database server box.
 
 ## Warning

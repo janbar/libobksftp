@@ -2,6 +2,9 @@
   Win64: Do not use the path separator of the platform,
   to comply with the SFTP protocol specifications
 
+  All: Link static OpenSSL 1.1.1w and thus fix any ABI issue with an
+  outdated crypto library
+
 1.0.11.3:
   Add handler to log debug message from libssh2 into the log file
   Crypto backend for win64 is OpenSSL. The lib crypto is linked statically,
